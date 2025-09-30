@@ -1,9 +1,16 @@
+import React from 'react';
+import Header from './componentes/Header';
+import CardGame from './Juegos/CardGame';
 
-function App() {
-
+export default function App(){
   return (
-  <div></div>
-  )
+    <div className="app">
+      <Header title="FunCards" />
+      <main className="container">
+        <h2>Juegos</h2>
+        {/* Por ahora mostramos el CardGame directamente */}
+        <CardGame />
+      </main>
+    </div>
+  );
 }
-
-export default App

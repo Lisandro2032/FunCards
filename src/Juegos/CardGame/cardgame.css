@@ -1,0 +1,24 @@
+.cardgame .grid{
+  display:grid;
+  grid-template-columns: repeat(4, 120px);
+  gap: 12px;
+  justify-content:center;
+}
+.card{
+  width:120px; height:160px; perspective:1000px; cursor:pointer;
+}
+.card .card-inner{
+  position:relative; width:100%; height:100%; transition: transform .55s; transform-style: preserve-3d;
+  border-radius:10px;
+}
+.card .card-front, .card .card-back{
+  position:absolute; inset:0; display:flex; align-items:center; justify-content:center; backface-visibility:hidden;
+  border-radius:10px; font-size:32px;
+}
+.card .card-front{
+  background:var(--card-surface); color:var(--muted); 
+}
+.card .card-back{
+  background:var(--accent); color:white; transform:rotateY(180deg);
+}
+.card.flipped .card-inner{ transform: rotateY(180deg); }
