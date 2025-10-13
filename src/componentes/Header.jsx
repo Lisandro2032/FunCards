@@ -9,7 +9,10 @@ export default function Header({ title }){
         <Link to="/">
         <button className="btn">Home</button> 
         </Link>
+        <Link to="/Settings">
         <button className="btn">Settings</button>
+        </Link>
+        <button className="btn">🔍</button>
       </nav>
     </header>
   );
