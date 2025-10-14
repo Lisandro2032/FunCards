@@ -26,9 +26,9 @@ export function PPT() {
   return (
     <div>
       <h1>PIEDRA, PAPEL Y TIJERA</h1>
-      <button onClick={() => handlePlay("Piedra")}>Piedra</button>
-      <button onClick={() => handlePlay("Papel")}>Papel</button>
-      <button onClick={() => handlePlay("Tijeras")}>Tijeras</button>
+      <button className="btnobjeto"onClick={() => handlePlay("Piedra")}>Piedra</button>
+      <button className="btnobjeto"onClick={() => handlePlay("Papel")}>Papel</button>
+      <button className="btnobjeto"onClick={() => handlePlay("Tijeras")}>Tijeras</button>
 
       <p>Tu elección: {playerChoice}</p>
       <p>CPU: {computerChoice}</p>
