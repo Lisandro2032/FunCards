@@ -2,22 +2,24 @@ import React from 'react';
 import Header from './componentes/Header';
 import CardGame from './Juegos/CardGame';
 import Settings from "./componentes/Settings";
+import { BtnJ } from './componentes/BotonJ';
 import TicTacToe from './Juegos/CardGame/TicTacToe/Index';
 import { PPT } from "./Juegos/PPT";
 import { Routes, Route, Link } from 'react-router-dom';
 
+
 function Home() {
   return (
-    <div>
+    <div className='Juegos-Container'>
       <h2>Bienvenido a FunCards 🎴</h2>   
       <Link to="/cardgame">
-        <button className="btnjuegos">Jugar al Memory</button>
+        <BtnJ nombre="Memoria" imgSrc="/img/memory-game.png" />
       </Link>
       <Link to="/TicTacToe">
-        <button className="btnjuegos">Jugar al TicTacToe</button>
+        <BtnJ nombre="TicTacToe" imgSrc="/img/TICTACTOE.png" />
       </Link>
       <Link to="/PPT">
-        <button className="btnjuegos">Jugar al Piedras, Papel y Tijeras</button>
+        <BtnJ nombre="Piedra, Papel, Tijeras" imgSrc="/img/PPT.jpg" />
       </Link>
     </div>
   );
