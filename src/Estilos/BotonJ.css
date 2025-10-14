@@ -1,19 +1,22 @@
 
 .Juego{
-  display: flex;
-  flex-direction: column; 
+display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 120px;           
-  height: 130px;          
-  background: transparent;
+  width: 120px;
+  height: 130px;
+  background: rgba(255, 255, 255, 0.03);
   border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 8px;
+  border-radius: 10px;
   color: var(--text);
   cursor: pointer;
-  margin: 1%;
-  overflow: hidden;       
-  transition: transform 0.2s ease, border-color 0.2s ease;
+  margin: 1.5%;
+  overflow: hidden;
+  transition: 
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    border-color 0.25s ease;
 }
 
 .Juego p{
@@ -26,4 +29,14 @@
   object-fit: contain;    
   margin-top: 5px;
   }
-.Juego:hover{ transform:translateY(-2px); }
+.Juego:hover{ transform: translateY(-5px) scale(1.05);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+  border-color: rgba(255, 255, 255, 0.3);
+  animation: levitar 1.8s ease-in-out infinite; }
+
+  @keyframes levitar {
+  0% { transform: translateY(-5px) scale(1.05); }
+  50% { transform: translateY(-10px) scale(1.05); }
+  100% { transform: translateY(-5px) scale(1.05); }
+}
+
