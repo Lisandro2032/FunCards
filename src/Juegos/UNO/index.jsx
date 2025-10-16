@@ -43,6 +43,7 @@ export default function UNO() {
       card.color === top.color ||
       card.value === top.value ||
       card.color === "black";
+     (colorChoice && card.color === colorChoice);
 
     if (!canPlay) {
       if (!isBot) alert("No podés jugar esa carta.");
@@ -57,7 +58,8 @@ export default function UNO() {
     handleSpecialCard(card, isBot);
 
     setDiscardTop(card);
-
+    
+    if (card.color !== "black") setColorChoice(card.color);
    
     setTurn(isBot ? "player" : "bot");
   }
@@ -70,6 +72,9 @@ export default function UNO() {
         break;
       case "+4":
         drawCard(!isBot, 4);
+        const newColor = randomColor();
+      setDiscardTop({ ...card, color: newColor });
+      setColorChoice(newColor);
        
         setDiscardTop({ ...card, color: randomColor() });
         break;
@@ -82,8 +87,9 @@ export default function UNO() {
         setTurn(isBot ? "bot" : "player");
         break;
       case "wild":
-      
-        setDiscardTop({ ...card, color: randomColor() });
+      const chosenColor = randomColor();
+      setDiscardTop({ ...card, color: chosenColor });
+      setColorChoice(chosenColor);
         break;
       default:
         break;
@@ -128,15 +134,24 @@ export default function UNO() {
       <div className="discard">
         <h3>Carta actual:</h3>
         {discardTop && (
-          <div className={`card ${discardTop.color}`}>
-            <span>{discardTop.value}</span>
-          </div>
-        )}
+    <>
+      <div className={`card ${discardTop.color}`}>
+        <span>{discardTop.value}</span>
       </div>
+      <p className="current-color-text">
+  Se está jugando:{" "}
+  <span className={`color-label ${colorChoice}`}>
+    {colorChoice?.toUpperCase()}
+  </span>
+</p>
+    </>
+  )}
+</div>
 
 
       <div className="player-hand">
         <h3>Tu mano:</h3>
+        
         <div className="hand">
           {playerHand.map(card => (
             <div

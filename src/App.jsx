@@ -10,8 +10,9 @@ import UNO from "./Juegos/UNO/index.jsx";
 import Motox3m from "./Juegos/IFRAMES/MOTO3/motito.jsx";
 function Home() {
   return (
-    <div className='Juegos-Container'>
-      <h2>Bienvenido a FunCards 🎴</h2>   
+    <div>
+      <h2>Bienvenido a Funcards!</h2>
+    <div className='Juegos-Container'>   
       <Link to="/cardgame">
         <BtnJ nombre="Memoria" imgSrc="/img/memory-game.png" />
       </Link>
@@ -28,6 +29,7 @@ function Home() {
   <BtnJ nombre="MOTOX3M" imgSrc="/img/moto-x3m.avif" />
 </Link>
 
+    </div>
     </div>
   );
 }

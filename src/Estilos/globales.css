@@ -11,12 +11,13 @@ body{
   background: linear-gradient(180deg, #143ba9 0%, #061945 100%);
   color:var(--text);
   min-height:100vh;
-  display:flex; flex-direction:column; align-items: center; padding: 15px;
+  display: flex; flex-direction:column; align-items: center; padding: 15px;
    
 }
-.container{width:100%; max-width:1100px; padding:24px; background: #002333 linear-gradient(180deg, #061945 0%, #143ba9 100%);; border-radius: 20px; box-shadow:  5px 5px 8px #002333;}
+.container{width:100%; max-width:1100px; padding:24px; background: #002333 linear-gradient(180deg, #061945 0%, #143ba9 100%); border-radius: 20px; box-shadow:  5px 5px 8px #002333;}
 
 .site-header{width:100%; display:flex; justify-content:space-between; align-items:center; padding:12px 24px; border-bottom: 1px solid  }
+
 .btn{
   background:transparent; border:1px solid rgba(255,255,255,0.06); padding:8px 12px; border-radius:8px; color:var(--text);
   cursor:pointer;
@@ -50,9 +51,20 @@ body.light button {
 
 .Juegos-Container{
  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); 
-  gap: 20px;                
-  justify-items: center;    
-  align-items: center;      
+  grid-template-columns: repeat(4, 1fr); 
+  gap: 20px; 
   width: 100%;
-  padding: 20px;}
+  justify-items: center; 
+  margin-top: 20px;}
+
+  @media (max-width: 900px) {
+  .Juegos-Container {
+    grid-template-columns: repeat(2, 1fr); /
+  }
+}
+
+@media (max-width: 500px) {
+  .Juegos-Container {
+    grid-template-columns: 1fr; 
+  }
+}
