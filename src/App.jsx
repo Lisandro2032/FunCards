@@ -6,8 +6,8 @@ import { BtnJ } from './componentes/BotonJ';
 import TicTacToe from './Juegos/CardGame/TicTacToe/Index';
 import { PPT } from "./Juegos/PPT";
 import { Routes, Route, Link } from 'react-router-dom';
-
-
+import UNO from "./Juegos/UNO/index.jsx";
+import Motox3m from './Juegos/IFRAMES/MOTO3/moto-x3m.jsx';
 function Home() {
   return (
     <div className='Juegos-Container'>
@@ -20,6 +20,12 @@ function Home() {
       </Link>
       <Link to="/PPT">
         <BtnJ nombre="Piedra, Papel, Tijeras" imgSrc="/img/PPT.jpg" />
+      </Link>
+      <Link to="/UNO">
+        <BtnJ nombre="UNO" imgSrc="/img/UNO.jpg" />
+      </Link>
+      <Link to="/IFRAMES/moto-x3m">
+        <BtnJ nombre="MOTO X3M" imgSrc="/img/moto-x3m.avif" />
       </Link>
     </div>
   );
@@ -36,6 +42,9 @@ export default function App() {
           <Route path="/cardgame" element={<CardGame />} />
           <Route path="/TicTacToe" element={<TicTacToe/>} />
           <Route path="/PPT" element={<PPT />} />
+          <Route path="/uno" element={<UNO />} />
+          <Route path="/moto3" element={<Motox3m/>} />
+
         </Routes>
       </main>
     </div>

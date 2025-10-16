@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import './cardgame.css';
 
-// helper: barajar
+
 function shuffleArray(arr){
   return arr
     .map(v => ({ v, r: Math.random() }))
@@ -9,11 +9,11 @@ function shuffleArray(arr){
     .map(x => x.v);
 }
 
-const baseCards = ['🍎','🍌','🍇','🍒','🍋','🥝']; // 6 pares -> 12 cartas
+const baseCards = ['🍎','🍌','🍇','🍒','🍋','🥝']; 
 
 export default function CardGame(){
   const [deck, setDeck] = useState([]);
-  const [flipped, setFlipped] = useState([]); // indices
+  const [flipped, setFlipped] = useState([]); 
   const [matched, setMatched] = useState([]);
 
   useEffect(()=> {
