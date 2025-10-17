@@ -12,6 +12,9 @@ import POOL8 from './Juegos/IFRAMES/POOL8/8ball.jsx';
 import Motito from './Juegos/IFRAMES/MOTOPOOL/motopool.jsx';
 import Tmesa from './Juegos/IFRAMES/TMESA/tmesa.jsx';
 import Archery from './Juegos/IFRAMES/Arco/Arco.jsx';
+import Goldmine from './Juegos/IFRAMES/diamond/diamonds.jsx';
+import Solitario from './Juegos/IFRAMES/Solitario/solitario.jsx';
+import Geo from './Juegos/IFRAMES/GEO/Geo.jsx';
 
 function Home() {
   return (
@@ -45,6 +48,16 @@ function Home() {
       <Link to="/Archery">
         <BtnJ nombre="Archery World Tour" imgSrc="/img/ArcheryWorldTourTeaser.jpg" />
       </Link>
+      <Link to="/Goldmine">
+        <BtnJ nombre="GOLD MINE" imgSrc="/img/GoldMineTeaser.jpg" />
+      </Link>
+      <Link to="/Solitario">
+        <BtnJ nombre="SOLITARIO" imgSrc="/img/SolitaireKlondikeTeaser.jpg" />
+      </Link>
+      <Link to="/Geo">
+        <BtnJ nombre="GEO QUIZ Europe" imgSrc="/img/GeoQuizEuropeTeaser.jpg" />
+      </Link>
+
 
 
 
@@ -70,6 +83,9 @@ export default function App() {
           <Route path="/Motito" element={<Motito/>} />
           <Route path="/Tmesa" element={<Tmesa/>} />
           <Route path="/Archery" element={<Archery/>} />
+          <Route path="/Goldmine" element={<Goldmine/>} />
+          <Route path="/Solitario" element={<Solitario/>} />
+          <Route path="/Geo" element={<Geo/>} />
         </Routes>
       </main>
     </div>
