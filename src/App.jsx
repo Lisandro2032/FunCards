@@ -7,7 +7,12 @@ import TicTacToe from './Juegos/CardGame/TicTacToe/Index';
 import { PPT } from "./Juegos/PPT";
 import { Routes, Route, Link } from 'react-router-dom';
 import UNO from "./Juegos/UNO/index.jsx";
-import Motox3m from "./Juegos/IFRAMES/MOTO3/motito.jsx";
+import Freekickk from './Juegos/IFRAMES/DRIFT/freekick.jsx';
+import POOL8 from './Juegos/IFRAMES/POOL8/8ball.jsx';
+import Motito from './Juegos/IFRAMES/MOTOPOOL/motopool.jsx';
+import Tmesa from './Juegos/IFRAMES/TMESA/tmesa.jsx';
+import Archery from './Juegos/IFRAMES/Arco/Arco.jsx';
+
 function Home() {
   return (
     <div>
@@ -25,9 +30,23 @@ function Home() {
       <Link to="/UNO">
         <BtnJ nombre="UNO" imgSrc="/img/UNO.jpg" />
       </Link>
-      <Link to="/motox3m">
-  <BtnJ nombre="MOTOX3M" imgSrc="/img/moto-x3m.avif" />
-</Link>
+      <Link to="/Freekickk">
+        <BtnJ nombre="Free Kick 3D" imgSrc="/img/FREEKICK3D.jpg" />
+      </Link>
+      <Link to="/POOL8">
+        <BtnJ nombre="8 BALL POOL" imgSrc="/img/8POOL.jpg" />
+      </Link>
+      <Link to="/Motito">
+        <BtnJ nombre="MOTO X3M POOL PARTY" imgSrc="/img/MotoX3mPoolParty.jpg" />
+      </Link>
+      <Link to="/Tmesa">
+        <BtnJ nombre="Tenis de Mesa" imgSrc="/img/TableTennis_WorldTour_Teaser.jpg" />
+      </Link>
+      <Link to="/Archery">
+        <BtnJ nombre="Archery World Tour" imgSrc="/img/ArcheryWorldTourTeaser.jpg" />
+      </Link>
+
+
 
     </div>
     </div>
@@ -46,8 +65,11 @@ export default function App() {
           <Route path="/TicTacToe" element={<TicTacToe/>} />
           <Route path="/PPT" element={<PPT />} />
           <Route path="/uno" element={<UNO />} />
-          <Route path="/motox3m" element={<Motox3m />} />
-
+          <Route path="/freekickk" element={<Freekickk/>} />
+          <Route path="/POOL8" element={<POOL8/>} />
+          <Route path="/Motito" element={<Motito/>} />
+          <Route path="/Tmesa" element={<Tmesa/>} />
+          <Route path="/Archery" element={<Archery/>} />
         </Routes>
       </main>
     </div>
